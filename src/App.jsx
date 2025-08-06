@@ -6,7 +6,9 @@ function App() {
   return (
     <>
      <Header></Header>
-     <Players></Players>
+    
+       <Players></Players>
+    
     </>
   )
 }
