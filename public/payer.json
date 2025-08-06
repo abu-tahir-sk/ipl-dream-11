@@ -1,0 +1,85 @@
+[
+
+  {
+    "id": 1,
+    "player_name": "Ravi Sharma",
+    "player_img": "https://i.ibb.co/6c8yBcv5/385535.webp",
+    "country_name": "India",
+    "player_rounder": "All-rounder",
+    "player_hand": "Right-hand",
+    "price": 1200
+  },
+  {
+    "id": 2,
+    "player_name": "James Walker",
+    "player_img": "https://i.ibb.co/WvFnwgdd/James-Walker-2363880.jpg",
+    "country_name": "Australia",
+    "player_rounder": "Batsman",
+    "player_hand": "Left-hand",
+    "price": 1500
+  },
+  {
+    "id": 3,
+    "player_name": "Chris Anderson",
+    "player_img": "https://i.ibb.co/Y7hdCFCd/384915.webp",
+    "country_name": "England",
+    "player_rounder": "All-rounder",
+    "player_hand": "Right-hand",
+    "price": 1800
+  },
+  {
+    "id": 4,
+    "player_name": "Ali Khan",
+    "player_img": "https://i.ibb.co/qFhdB4qD/gettyimages-99966459-612x612.jpg",
+    "country_name": "Pakistan",
+    "player_rounder": "Bowler",
+    "player_hand": "Left-hand",
+    "price": 1350
+  },
+  {
+    "id": 5,
+    "player_name": "Daniel Cooper",
+    "player_img": "https://i.ibb.co/XkGY5S57/qc8tmtpipe35kzlxatad.jpg",
+    "country_name": "New Zealand",
+    "player_rounder": "All-rounder",
+    "player_hand": "Both-hand",
+    "price": 2000
+  },
+  {
+    "id": 6,
+    "player_name": "John Smith",
+    "player_img": "https://i.ibb.co/DH4FcGpj/images.jpg",
+    "country_name": "South Africa",
+    "player_rounder": "Batsman",
+    "player_hand": "Right-hand",
+    "price": 1700
+  },
+  {
+    "id": 7,
+    "player_name": "Nuwan Perera",
+    "player_img": "https://i.ibb.co/NgQPq0Yd/ali-khan.jpg",
+    "country_name": "Sri Lanka",
+    "player_rounder": "All-rounder",
+    "player_hand": "Left-hand",
+    "price": 1400
+  },
+  {
+    "id": 8,
+    "player_name": "Hasan Rahman",
+    "player_img": "https://i.ibb.co/zHQr67Kj/gettyimages-905021294-612x612.jpg",
+    "country_name": "Bangladesh",
+    "player_rounder": "Bowler",
+    "player_hand": "Right-hand",
+    "price": 1250
+  },
+  {
+    "id": 9,
+    "player_name": "Jason Lewis",
+    "player_img": "https://i.ibb.co/tpSstqmx/images-1.jpg",
+    "country_name": "West Indies",
+    "player_rounder": "All-rounder",
+    "player_hand": "Both-hand",
+    "price": 1900
+  }
+  
+]
