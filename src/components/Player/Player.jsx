@@ -2,8 +2,8 @@ import { CiFlag1 } from "react-icons/ci";
 import PropTypes from 'prop-types'; 
 
 
-const Player = ({ player }) => {
-      
+const Player = ({ player,handleSelectedPlayers,isActive2 }) => {
+         
       const {id,player_name,player_img,country_name,player_rounder,player_hand,price} = player;
      
       return (
@@ -11,11 +11,10 @@ const Player = ({ player }) => {
                 <div className=''>
                   <img className='h-60 w-full rounded-lg' src={player_img} alt="" />
                 </div>
-                <div>
-                  <h4 className='font-bold py-3'>
+                <div className="flex justify-start items-center gap-2">
+                  <img className="w-6 h-7 rounded-full" src={player_img} alt="" />
+                  <h4 className='font-bold py-3'>{player_name}</h4>
                   
-            {player_name}</h4>
-                 
                 </div>
                 <div className='flex justify-between pb-2'>
                   <div className="flex items-center gap-2">
@@ -31,7 +30,8 @@ const Player = ({ player }) => {
                </div>
                <div className="flex justify-between pb-2">
                   <p className='font-bold'>Price: $ {price}</p>
-                  <button className='py-1 px-2 font-bold border-2 rounded-lg'>Choose Player</button>
+                  <button className=
+                              {`font-bold border-2 px-4 py-2 rounded-lg bg-lightgray ${isActive2 ? 'bg-[#E7FE29]  border-2' : ''}`} onClick={() => handleSelectedPlayers(player)}>Choose Player</button>
                </div>
             </div>
       );
