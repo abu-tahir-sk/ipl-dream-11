@@ -2,12 +2,12 @@ import { CiFlag1 } from "react-icons/ci";
 import PropTypes from 'prop-types'; 
 
 
-const Player = ({ player,handleSelectedPlayers,isActive2 }) => {
+const Player = ({ player,handleSelectedPlayers,activePlayerId,coins,toast}) => {
          
       const {id,player_name,player_img,country_name,player_rounder,player_hand,price} = player;
      
       return (
-            <div className='p-3 shadow-lg rounded-md border'> 
+            <div className='p-3 shadow-sm rounded-md border'> 
                 <div className=''>
                   <img className='h-60 w-full rounded-lg' src={player_img} alt="" />
                 </div>
@@ -16,7 +16,7 @@ const Player = ({ player,handleSelectedPlayers,isActive2 }) => {
                   <h4 className='font-bold py-3'>{player_name}</h4>
                   
                 </div>
-                <div className='flex justify-between pb-2'>
+                <div className='flex justify-between border-b-2 py-4'>
                   <div className="flex items-center gap-2">
                         <p className="text-gray-900"><CiFlag1></CiFlag1></p>
                   <p className='text-gray-400'>{country_name}</p>
@@ -31,7 +31,16 @@ const Player = ({ player,handleSelectedPlayers,isActive2 }) => {
                <div className="flex justify-between pb-2">
                   <p className='font-bold'>Price: $ {price}</p>
                   <button className=
-                              {`font-bold border-2 px-4 py-2 rounded-lg bg-lightgray ${isActive2 ? 'bg-[#E7FE29]  border-2' : ''}`} onClick={() => handleSelectedPlayers(player)}>Choose Player</button>
+                              {`font-bold border-2 px-4 py-2 rounded-lg bg-lightgray hover:bg-[#E7FE29] ${activePlayerId === player.id ? 'bg-[#E7FE29]  border-2' : ''}`}  onClick={() => {
+    if (coins > 0) {
+      handleSelectedPlayers(player);
+    } else {
+      toast.error("Not enough coins!", {
+        position: "top-center",
+      });
+    }
+  }}>Choose Player</button>
+                  
                </div>
             </div>
       );

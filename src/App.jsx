@@ -1,7 +1,10 @@
 import { useState } from "react"
 import Header from "./components/Header/Header"
 import Available from "./components/Available/Available";
-
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import Subscrib from "./components/Subscrib/Subscrib";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -14,32 +17,42 @@ function App() {
   const [coins, setCoins] = useState(0);
 
   const handleChoosePlayerPrice = (pr) => {
-   if(coins > pr ){
+   if(coins >= pr ){
      setCoins(coins - pr)
+     toast.success("Congrates !! Kieron Pullard is now in your squad", {
+      position: "top-center",
+      autoClose: 500
+     });
    }
    else{
-    alert('alert')
+      toast.warn("Pleas coin added", {
+        position: "top-center",
+        autoClose: 1000
+      });
    }
   }
   
-
-        const [isActive2, setIsActive2] = useState(false);
+  const [isActive2, setIsActive2] = useState(false);
   
-        const handleAddMoney = () => {
-              setCoins(coins + 600000)
+  const handleAddMoney = () => {
+          setCoins(coins + 600000)
               setIsActive2(true);
               setTimeout(() => setIsActive2(false), 500);
-              
-        }
+              toast.success("Coins added successful", {
+      position: "top-center",
+     });
+  }
   
   const [selected, setSelected] = useState([]);
   
   const handleDeleteCoins = (id) => {
     const player = selected.find((p) => p.id == id);
     
-      
-       setCoins(coins-player.price)
-
+       setCoins(coins + player.price)
+      toast.warn("Selected Player deleted", {
+      position: "top-right",
+      autoClose: 500
+     });
    
   }
 
@@ -49,16 +62,23 @@ function App() {
     setSelected(reminigPlayer);
   }
 
+  const [activePlayerId, setActivePlayerId] = useState(null);
+
+
   const handleSelectedPlayers = (player) => {
     const isExist = selected.find((p) => p.id == player.id);
     if(isExist){
-      alert('na');
+      toast.warn("Already selected players", {
+      position: "top-right",
+      autoClose: 500
+     });
     }
     else{
+      setActivePlayerId(player.id);
       handleChoosePlayerPrice(player.price);
 
-      setIsActive2(player.id);
-    setTimeout(() => setIsActive2(false), 500);
+      setTimeout(() => setActivePlayerId(null),500)
+
        const newPlayers = [...selected, player];
        
     setSelected(newPlayers);
@@ -85,9 +105,12 @@ function App() {
   
   return (
     <>
-     <Header coins={coins} isActive2={isActive2} handleAddMoney={handleAddMoney}></Header>
-      <Available isActive2={isActive2} handleDelete={handleDelete} selected={selected} handleSelectedPlayers={handleSelectedPlayers} isActive={isActive} handleIsActiveStatus={handleIsActiveStatus}></Available>
-          
+     <Header   coins={coins} isActive2={isActive2} handleAddMoney={handleAddMoney}></Header>
+      <Available toast={toast} coins={coins} activePlayerId={activePlayerId} handleDelete={handleDelete} selected={selected} handleSelectedPlayers={handleSelectedPlayers} isActive={isActive} handleIsActiveStatus={handleIsActiveStatus}></Available>
+      <Subscrib></Subscrib>
+      <Footer></Footer>
+       <ToastContainer></ToastContainer> 
+
     </>
   )
 }

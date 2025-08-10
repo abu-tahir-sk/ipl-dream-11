@@ -3,10 +3,10 @@ import { MdDeleteForever } from "react-icons/md";
 const Selected = ({selected,handleDelete}) => {
      
       return (
-            <div className="w-11/12 mx-auto grid grid-cols-1 gap-4">
+            <div className="w-11/12 mx-auto min-h-80 pb-8">
               {selected.map((player) => (
-                 <div key={player.id}>
-                   <div className="flex justify-between items-center border-2 py-6 px-6 rounded-lg">
+                 <div key={player.id} className="">
+                   <div className="flex justify-between items-center my-4 border-2 py-6 px-6 rounded-lg">
                        <div className="flex justify-start items-center gap-4">
                          <img  className="w-10 h-10 rounded-full" src={player.player_img} alt="" />
                         <div>
@@ -19,10 +19,11 @@ const Selected = ({selected,handleDelete}) => {
                        className="text-orange-300"
                        ><MdDeleteForever></MdDeleteForever></button>
                   </div>
-                    
+                  
                  </div>
                  
       ))}
+        <button className="p-2 text-xl border-2 rounded-lg  bg-[#E7FE29]">Add More Player</button>
             </div>
       );
 };

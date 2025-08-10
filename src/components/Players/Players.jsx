@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import Player from "../Player/Player";
 
 
-const Players = ({handleSelectedPlayers,isActive2}) => {
+
+const Players = ({handleSelectedPlayers,activePlayerId,coins,toast}) => {
       
       const [players, setPlayers] = useState([]);
  
@@ -17,15 +18,18 @@ const Players = ({handleSelectedPlayers,isActive2}) => {
       return (
             <main className="w-11/12 mx-auto py-6">        
                                 
-                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 shadow-md border-2 p-0 md:p-4 rounded-2xl">
+                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                    {
-                        players.map(player => <Player
-                        isActive2={isActive2}
+                        players.map(player => <Player 
+                              coins={coins}
+                              toast={toast} 
+                              activePlayerId={activePlayerId}                    
                         handleSelectedPlayers={handleSelectedPlayers}
                                key={player.id} 
                         player={player}>
                    </Player>)
                   }
+                   
                  </div>
                
             </main>

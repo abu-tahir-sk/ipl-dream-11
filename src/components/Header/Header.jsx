@@ -22,7 +22,7 @@ const Header = ({handleAddMoney,isActive2,coins}) => {
                    <li><a className="font-bold text-black"  href="">Fixture</a  ></li>
                    <li><a className="font-bold text-black"  href="">Schedules</a></li>                
                  </ul>
-                  <button className="py-1 px-3 rounded-md shadow-lg border-2 font-bold flex justify-center items-center gap-1"><span>{coins} </span> Coin <span> <img className="w-6 rounded-full" src="/src/assets/image/coin.png" alt="" /> </span></button>
+                  <button className="py-1 px-3 rounded-md shadow-lg border-2 font-bold flex justify-center items-center gap-1"><span>{coins} </span> Coin <span> <img className="w-6 rounded-full animate-pulse" src="/src/assets/image/coin.png" alt="" /> </span></button>
                  </nav>
                 </nav>
                 <div className="my-6 flex justify-center items-center flex-col bg-hero-pattern bg-[#131313] rounded-md bg-cover py-8 md:py-16">
