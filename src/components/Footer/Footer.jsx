@@ -21,8 +21,8 @@ function Footer() {
                         <div className="flex flex-col justify-center items-start gap-3 p-6 ">
                              <h4 className="text-white font-bold">Subscribe</h4>
                               <p className="text-white text-wrap">Subscribe to our newsletter for the latest updates.</p>
-                              <div className='flex justify-center items-end gap-3 py-6'>
-                              <input className='py-3 rounded-lg px-2 hover:border-2' type="email" placeholder='Enter your email'/>
+                              <div className='md:flex justify-center items-end sm:gap-1 md:gap-3 py-6'>
+                              <input className='py-3 rounded-lg px-2 sm:my-3 md:my-0 hover:border-2' type="email" placeholder='Enter your email'/>
                               <button className='px-2 py-3 border-2 rounded-lg bg-gradient-to-r from-orange-400 to-red-400 font-bold'>Subscribe</button>
                         </div>
                         </div>

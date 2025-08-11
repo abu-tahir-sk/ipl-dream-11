@@ -102,11 +102,22 @@ function App() {
        
     }
   };
+
   
   return (
     <>
      <Header   coins={coins} isActive2={isActive2} handleAddMoney={handleAddMoney}></Header>
-      <Available toast={toast} coins={coins} activePlayerId={activePlayerId} handleDelete={handleDelete} selected={selected} handleSelectedPlayers={handleSelectedPlayers} isActive={isActive} handleIsActiveStatus={handleIsActiveStatus}></Available>
+      <Available 
+       toast={toast} 
+       coins={coins}
+        activePlayerId={activePlayerId} 
+        handleDelete={handleDelete}
+         selected={selected}
+          handleSelectedPlayers={handleSelectedPlayers}
+           isActive={isActive} 
+           handleIsActiveStatus={handleIsActiveStatus}
+      
+      ></Available>
       <Subscrib></Subscrib>
       <Footer></Footer>
        <ToastContainer></ToastContainer> 

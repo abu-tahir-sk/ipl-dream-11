@@ -16,14 +16,14 @@ const Players = ({handleSelectedPlayers,activePlayerId,coins,toast}) => {
 
     
       return (
-            <main className="w-11/12 mx-auto py-6">        
+            <main    className="w-11/12 mx-auto py-6">        
                                 
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                    {
                         players.map(player => <Player 
                               coins={coins}
                               toast={toast} 
-                              activePlayerId={activePlayerId}                    
+                              activePlayerId={activePlayerId}                  
                         handleSelectedPlayers={handleSelectedPlayers}
                                key={player.id} 
                         player={player}>

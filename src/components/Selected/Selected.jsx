@@ -1,6 +1,7 @@
 import { MdDeleteForever } from "react-icons/md";
 
-const Selected = ({selected,handleDelete}) => {
+
+const Selected = ({selected,handleDelete,handleIsActiveStatus}) => {
      
       return (
             <div className="w-11/12 mx-auto min-h-80 pb-8">
@@ -23,7 +24,8 @@ const Selected = ({selected,handleDelete}) => {
                  </div>
                  
       ))}
-        <button className="p-2 text-xl border-2 rounded-lg  bg-[#E7FE29]">Add More Player</button>
+        <button  onClick={() => handleIsActiveStatus("players")}  className="p-2 text-xl border-2 rounded-lg  bg-[#E7FE29]">Add More Player</button>
+      
             </div>
       );
 };
